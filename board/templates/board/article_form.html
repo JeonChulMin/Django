@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+<form method = "POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type = "submit">
+</form>
+{% comment %} action 없으면 갈 곳이 없기 떄문에 지금 URL로 다시 쏨,  {% endcomment %}
+{% endblock %}
